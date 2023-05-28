@@ -1,0 +1,4 @@
+kubectl create secret generic tanner-core-api-secret --from-file=./appsettings.json --namespace core
+kubectl create secret docker-registry azurecontainerregistry --docker-server=acrautomotriz.azurecr.io --docker-username=acrAutomotriz --docker-password=Sp=Aw6D0vUsqZESlgeetMtFYq69bIUIK --docker-email=pedro.garciar@tanner.cl --namespace core
+kubectl apply -f deploy.yaml
+kubectl apply -f svc.yaml

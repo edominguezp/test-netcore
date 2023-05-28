@@ -1,0 +1,27 @@
+acr: tanner
+
+nginxIngress: true
+
+readinessProbe:
+  path: "/health"
+  
+appsettings_path : "/app/Settings"
+
+
+ingress:
+  enabled: false
+  annotations:
+    ingressClass : "kubernetes.io/ingress.class: nginx"
+  hosts:
+    dev: "core-api-dev.tanner.cl"
+    qa: "core-api-qa.tanner.cl"
+    prod: "core-api.tanner.cl"
+  path: "/"
+
+resources:
+  requests:
+    memory: "250Mi"
+    cpu: "50m"
+  limits:
+    memory: "350Mi"
+    cpu: "100m"

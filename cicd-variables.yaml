@@ -1,0 +1,13 @@
+variables:
+  path-to-project: '**/*.sln' # path to solution or project that will be used in the build and restore tasks
+  build-configuration: 'Release'
+  dotnet-version: '2.2.x'
+  nuget-path: "NuGet.Config"
+  pool-name: "Azure Pipelines"
+  pool-vmImage: "ubuntu-latest"
+  project-to-publish: "Tanner.Core.API/Tanner.Core.API.csproj" # path to project that will be used in the publish tasks
+  app-name: "api-core" # application name will be used in docker repository url [app-bu].[app-project].[app-name]
+  app-project: "na" # application project will be used in docker repository url [app-bu].[app-project].[app-name]
+  app-bu: "enterprise" # application business unit will be used in docker repository url [app-bu].[app-project].[app-name]
+  namespace: "core"
+  keyvault-name : "aks-kv-prod-core"

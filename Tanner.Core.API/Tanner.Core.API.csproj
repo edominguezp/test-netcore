@@ -1,0 +1,89 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TypeScriptSourceMap>True</TypeScriptSourceMap>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <ApplicationInsightsResourceId>/subscriptions/293c1183-8b08-4bbd-9f28-e042fd037525/resourcegroups/rg-core-api/providers/microsoft.insights/components/AI-core-api-dev</ApplicationInsightsResourceId>
+    <Version>2.6.0.0</Version>
+    <Company>Tanner</Company>
+    <Authors>Tanner</Authors>
+    <Copyright>Copyright 2020</Copyright>
+    <RepositoryUrl>https://tanner-cl.visualstudio.com/Core/_git/tanner-core-api</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Core, API</PackageTags>
+    <PackageReleaseNotes>* corrección query Query_DataDocumentByOperation dato venia en nulo y lo intenta parsear a decimal.</PackageReleaseNotes>
+    <Description>API que permite realizar los procesos en la BD de Core2</Description>
+    <AssemblyVersion>2.5.0.0</AssemblyVersion>
+    <FileVersion>2.5.0.0</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>.\Tanner.Core.API.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Commands\**" />
+    <Compile Remove="Configurations\**" />
+    <Compile Remove="ModelResources\**" />
+    <Content Remove="Commands\**" />
+    <Content Remove="Configurations\**" />
+    <Content Remove="ModelResources\**" />
+    <EmbeddedResource Remove="Commands\**" />
+    <EmbeddedResource Remove="Configurations\**" />
+    <EmbeddedResource Remove="ModelResources\**" />
+    <None Remove="Commands\**" />
+    <None Remove="Configurations\**" />
+    <None Remove="ModelResources\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Tanner.Core.API.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Connected Services\Application Insights\ConnectedService.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Tanner.Core.API.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="8.6.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights" Version="2.13.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.8.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.0.0-rc5" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.0.0-rc5" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Filters" Version="5.0.0-rc8" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="5.0.0-rc5" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="5.0.0-rc5" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="5.0.0-rc5" />
+    <PackageReference Include="Tanner.RestClient" Version="1.2.4" />
+    <PackageReference Include="Tanner.Utils" Version="1.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tanner.Core.DataAccess\Tanner.Core.DataAccess.csproj" />
+    <ProjectReference Include="..\Tanner.Core.Service\Tanner.Core.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties settings_4appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

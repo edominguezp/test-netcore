@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{EDCD9D02-7FEC-4B75-9FF0-58624202D3D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A3470D38-41C3-4E65-A197-6909C4E8525B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanner.Core.DataAccess", "Tanner.Core.DataAccess\Tanner.Core.DataAccess.csproj", "{EE532CA1-22FE-46B1-90B3-D0C110DF7D42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanner.Core.API", "Tanner.Core.API\Tanner.Core.API.csproj", "{58B9B3E1-DACE-46A1-A77D-0620435D07F2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5A9F0C75-89BD-4794-BDA2-A56809CA362C} = {5A9F0C75-89BD-4794-BDA2-A56809CA362C}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanner.Core.DataAccess.Test", "Tanner.Core.DataAccess.Test\Tanner.Core.DataAccess.Test.csproj", "{FAC45A07-E2F3-40E1-B851-3A5FEB402C0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DC6BB770-DE38-4904-B5E0-95B972BB1582}"
+	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
+		NuGet.Config = NuGet.Config
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanner.Core.Service", "Tanner.Core.Service\Tanner.Core.Service.csproj", "{5A9F0C75-89BD-4794-BDA2-A56809CA362C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EE532CA1-22FE-46B1-90B3-D0C110DF7D42} = {EE532CA1-22FE-46B1-90B3-D0C110DF7D42}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE532CA1-22FE-46B1-90B3-D0C110DF7D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE532CA1-22FE-46B1-90B3-D0C110DF7D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE532CA1-22FE-46B1-90B3-D0C110DF7D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE532CA1-22FE-46B1-90B3-D0C110DF7D42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58B9B3E1-DACE-46A1-A77D-0620435D07F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58B9B3E1-DACE-46A1-A77D-0620435D07F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58B9B3E1-DACE-46A1-A77D-0620435D07F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58B9B3E1-DACE-46A1-A77D-0620435D07F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAC45A07-E2F3-40E1-B851-3A5FEB402C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAC45A07-E2F3-40E1-B851-3A5FEB402C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAC45A07-E2F3-40E1-B851-3A5FEB402C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAC45A07-E2F3-40E1-B851-3A5FEB402C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A9F0C75-89BD-4794-BDA2-A56809CA362C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A9F0C75-89BD-4794-BDA2-A56809CA362C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A9F0C75-89BD-4794-BDA2-A56809CA362C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A9F0C75-89BD-4794-BDA2-A56809CA362C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EE532CA1-22FE-46B1-90B3-D0C110DF7D42} = {A3470D38-41C3-4E65-A197-6909C4E8525B}
+		{58B9B3E1-DACE-46A1-A77D-0620435D07F2} = {A3470D38-41C3-4E65-A197-6909C4E8525B}
+		{FAC45A07-E2F3-40E1-B851-3A5FEB402C0E} = {EDCD9D02-7FEC-4B75-9FF0-58624202D3D1}
+		{5A9F0C75-89BD-4794-BDA2-A56809CA362C} = {A3470D38-41C3-4E65-A197-6909C4E8525B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ED407E6C-203B-46F0-AFEA-B2EDFB4F4E79}
+	EndGlobalSection
+EndGlobal

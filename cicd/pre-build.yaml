@@ -1,0 +1,21 @@
+trigger: none
+
+variables:
+- template: ../cicd-variables.yaml  # Template reference
+
+resources:
+  repositories:
+  - repository: commonPipelinesRepo
+    type: git
+    name: devops-assets/common-pipelines
+
+stages:
+- template: net-core-app/pre-build-template.yaml@commonPipelinesRepo
+  parameters:
+      path-to-project: $(path-to-project) # path to solution or project that will be used in the build and restore tasks
+      build-configuration:  $(build-configuration)
+      dotnet-version:  $(dotnet-version)
+      nuget-path:  $(nuget-path)
+      pool-name:  $(pool-name)
+      pool-vmImage:  $(pool-vmImage)
+      tests-enabled: false

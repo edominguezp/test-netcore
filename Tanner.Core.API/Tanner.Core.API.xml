@@ -1,0 +1,1454 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tanner.Core.API</name>
+    </assembly>
+    <members>
+        <member name="T:Tanner.Core.API.Controllers.AssignmentContractController">
+            <summary>
+            Assignment Contract
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.AssignmentContractController.#ctor(Tanner.Core.DataAccess.Repositories.Interfaces.IAssignmentContractRepository,Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.AssignmentContractController},MediatR.IMediator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="repository">Repository</param>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.AssignmentContractController.GetAssignmentContract(System.Int64)">
+            <summary>
+            Get assignment contract data
+            </summary>
+            <summary xml:lang="es">
+            Obtener datos del contrato de cesión
+            </summary>
+            <returns>assignment contract data</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.BankController">
+            <summary>
+            Bank controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BankController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.BankController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IBankRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="bankRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BankController.GetBank">
+            <summary>
+            Get banks 
+            </summary>
+            <summary xml:lang="es">
+            Obtener los bancos
+            </summary>
+            <returns>Banks</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.BaseController`1">
+            <summary>
+            Base controller
+            </summary>
+            <summary xml:lang="es">
+            Controlador base
+            </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Controllers.BaseController`1.Logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BaseController`1.#ctor(Microsoft.Extensions.Logging.ILogger{`0},MediatR.IMediator)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BaseController`1.ReturnCode(Tanner.Core.DataAccess.Results.OperationBaseResult)">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BaseController`1.ReturnCode``1(Tanner.Core.DataAccess.Results.OperationResult{``0},System.String,System.String,System.Object)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TResource"></typeparam>
+            <param name="result"></param>
+            <param name="controller"></param>
+            <param name="actionName"></param>
+            <param name="routeValues"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BaseController`1.ReturnCode``1(Tanner.Core.DataAccess.Results.OperationCollectionResult{``0})">
+            <summary>
+            
+            </summary>
+            <param name="result"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BaseController`1.InternalError(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="error"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.BranchOfficeController">
+            <summary>
+            Branch Office controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BranchOfficeController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.BranchOfficeController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IBranchOfficeRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="branchOfficeRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.BranchOfficeController.Get">
+            <summary>
+            Get all branch offices
+            </summary>
+            <summary xml:lang="es">
+            Obtener todas las sucursales
+            </summary>
+            <returns>All data of branch offices</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.ChangeTypeController">
+            <summary>
+            Change Type controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ChangeTypeController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.ChangeTypeController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IChangeTypeRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger"></param>
+            <param name="mediator"></param>
+            <param name="changeTypeRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ChangeTypeController.GetChangeTypeValueInSystemByDateAndChangeType(Tanner.Core.DataAccess.Enums.ChangeTypeEnum,System.DateTime)">
+            <summary>
+            Get a specific exchange rate stored in the system for a specific date
+            </summary>
+            <summary xml:lang="es">
+            Obtiene un tipo de cambio especifico almacenado en el sistema para una fecha especifica
+            </summary>
+            <param name="changeType">1 - Peso chileno <br></br>2 - Unidad de fomento <br></br> 3 - Dólar estadounidense <br></br> 4 - Unidad tributaria mensual</param>
+            <param name="date">Fecha seleccionada</param>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.ChannelController">
+            <summary>
+            Channel controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ChannelController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.ChannelController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IChannelRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="channelRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ChannelController.Get">
+            <summary>
+            Get all channels
+            </summary>
+            <summary xml:lang="es">
+            Obtener todos los canales
+            </summary>
+            <returns>All data of channels</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.ClientController">
+            <summary>
+            Client controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.ClientController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IClientRepository,Tanner.Core.DataAccess.Repositories.Interfaces.IIntelicomRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="repository"></param>
+            <param name="intelicomRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.Get(System.String)">
+            <summary>
+            Get data Client
+            </summary>
+            <summary xml:lang="es">
+            Obtener los datos del cliente de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Data associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.AddCustomerCheckingAccount(System.String,Tanner.Core.DataAccess.Commands.AddClientCheckingAccountCommand)">
+            <summary>
+            Add Customer Checking Account
+            </summary>
+            <summary xml:lang="es">
+            Agregar Cuenta Corriente Cliente
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetFinancialDetail(System.String)">
+            <summary>
+            Get financial detail by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener el detalle financiero del cliente de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Financial detail associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetDetail(System.String)">
+            <summary>
+            Get client detail by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener el detalle del cliente de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Detail associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetFactoringDetail(System.String)">
+            <summary>
+            Get factoring detail by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener el detalle del factoring de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Detail associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetDebtorDetail(System.String)">
+            <summary>
+            Get debtor detail by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener el detalle del deudor de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Detail debtor associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetLastOperations(System.String)">
+            <summary>
+            Get las operations by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener las últimas operaciones del cliente de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns> Last operations associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GeHistoricOperationsDetail(System.String)">
+            <summary>
+            Get historic operations detail by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener las operaciones historicas de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Detail historic operations associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetWeightedTermDetail(System.String)">
+            <summary>
+            Get Weighted term by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener el plazo ponderado acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Detail weighted term associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GeHistoricCreditsDetail(System.String)">
+            <summary>
+            Get historic credits detail by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener los créditos historicos de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns>Detail historic credits associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetTotalPayments(System.String)">
+            <summary>
+            Get total payments detail by rut
+            </summary>
+            <summary xml:lang="es">
+            Obtener el total de pagos de acuerdo a su rut
+            </summary>
+            <param name="rut"></param>
+            <returns> Total payments associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.AddClient(Tanner.Core.DataAccess.ModelResources.AddClientResource)">
+            <summary>
+            Add Client 
+            </summary>
+            <summary xml:lang="es">
+            Agregar Cliente
+            </summary>       
+            <returns></returns> 
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetPercentagesBalanceSluggish(System.String)">
+            <summary>
+            Get percentages balance associated a Client
+            </summary> 
+            <summary xml:lang="es">
+            Obtiene los porcentajes del saldo asociado al cliente
+            </summary>
+            <param name="rut"></param>
+            <returns> Percentages associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetAddressDetailByClient(System.String)">
+            <summary>
+            Get address by client
+            </summary>
+            <summary xml:lang="es">
+            Obtener las direcciones por cliente
+            </summary>
+            <param name="rut"></param>
+            <returns>Detail of address associated a Client </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.AddAddressClient(Tanner.Core.DataAccess.Commands.AddAddressCommand)">
+            <summary>
+            Add Address Client
+            </summary>
+            <summary xml:lang="es">
+            Agregar dirección del cliente
+            </summary>       
+            <returns>Address Client</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.UpdateAddressClient(Tanner.Core.DataAccess.Commands.UpdateAddressCommand)">
+            <summary>
+            Update address with new parameters
+            </summary>
+            <summary xml:lang="es">
+            Actualizar la dirección con los nuevos parámetros
+            </summary>
+            <param name="command"></param>
+            <returns> if created return 204 or if not found return 404 </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetBankAccountDetailsByClient(System.String)">
+            <summary>
+            Get bank account by client
+            </summary>
+            <summary xml:lang="es">
+            Obtener cuenta bancaria por cliente
+            </summary>
+            <param name="rut">RUT del cliente</param>
+            <returns>Detail of the bank account associated with a Client</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetMainContactByClient(System.String)">
+            <summary>
+            Get main contact by client
+            </summary>
+            <summary xml:lang="es">
+            Obtener contacto principal por cliente
+            </summary>
+            <param name="rut">RUT del cliente</param>
+            <returns>main contact data</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ClientController.GetCreditLineByClient(System.String)">
+            <summary>
+            Get the ID of the credit line granted by the client
+            </summary>
+            <summary xml:lang="es">
+            Obtener el Id de la linea de credito otorgada por cliente
+            </summary>
+            <param name="rut">RUT del cliente</param>
+            <returns>main contact data</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.CommercialHierarchyController">
+            <summary>
+            Commercial Hierarchy controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.CommercialHierarchyController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.CommercialHierarchyController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.ICommercialHierarchyRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.CommercialHierarchyController.Get(System.String)">
+            <summary>
+            Get commercial Hierarchy of executive
+            </summary>
+            <summary xml:lang="es">
+            Obtener la jerarquía comercial de acuerdo a parámetros de entrada
+            </summary>
+            <param name="email"></param>
+            <returns>Commercial Hierarchy associated a executive </returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.CreditLineController">
+            <summary>
+            Credit line controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.CreditLineController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.CreditLineController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IClientRepository,Tanner.Core.DataAccess.Repositories.Interfaces.IFileRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="clientRepository"></param>
+            <param name="fileRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.CreditLineController.AddAddressClient(Tanner.Core.DataAccess.Commands.AddFileCommand)">
+            <summary>
+            Add File CORE
+            </summary>
+            <summary xml:lang="es">
+            Agregar un archivo a CORE
+            </summary>       
+            <returns>Address Client</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.DebtorController">
+            <summary>
+            Client controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DebtorController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.DebtorController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IDebtorRepository,Tanner.Core.DataAccess.Repositories.Interfaces.IIntelicomRepository,Tanner.Core.DataAccess.Repositories.Interfaces.IDocumentsDebtorRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="repository"></param>
+            <param name="intelicomRepository"></param>
+            <param name="documentsDebtor"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DebtorController.AddDebtor(Tanner.Core.DataAccess.ModelResources.DebtorBaseResource)">
+            <summary>
+            Add Debtor
+            </summary>
+            <summary xml:lang="es">
+            Agregar Deudor-Tercero
+            </summary>       
+            <returns></returns> 
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DebtorController.UpdateElectronicReceiver(Tanner.Core.DataAccess.ModelResources.UpdateElectronicReceiver)">
+            <summary>
+            Update state of electronic receiver
+            </summary>
+            <summary xml:lang="es">
+            Actualiza el estado del receptor electrónico
+            </summary>
+            <param name="request"></param>
+            <returns>  </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DebtorController.GetData(System.String)">
+            <summary>
+            Get data by debtor
+            </summary>
+            <summary xml:lang="es">
+            Obtener los datos del deudor
+            </summary>
+            <param name="rut"></param>
+            <returns>Debtor data </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DebtorController.GetDocuments">
+            <summary>
+            Get data documents for debtors
+            </summary>
+            <summary xml:lang="es">
+            Obtener los datos de los documentos de los deudores
+            </summary>
+            <returns>Collection of debtors</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.DocumentController">
+            <summary>
+            Document API
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DocumentController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.DocumentController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IDocumentRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DocumentController.GetOperations(System.String,System.String)">
+            <summary>
+            Get detail operations by document number
+            </summary>
+            <summary xml:lang="es">
+            Obtiene el detalle de las operaciones dado el número de un documento
+            </summary>
+            <returns>Operations details</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DocumentController.UpdateGrantDocument(Tanner.Core.DataAccess.Models.DocumentGrantRequest)">
+            <summary>
+            Update the grant status of the document
+            </summary>
+            <summary xml:lang="es">
+            Actualizar el estado de cesión del documento
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.DocumentController.GetDayDocument(System.DateTime,System.String)">
+            <summary>
+            Get day document
+            </summary>
+            <summary xml:lang="es">
+            Obtener dias de documento
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.EmployeeController">
+            <summary>
+            Employee controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.EmployeeController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.EmployeeController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IEmployeeRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="employeeRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.EmployeeController.Get(System.String)">
+            <summary>
+            Get Data by employee asociated to email
+            </summary>
+            <summary xml:lang="es">
+            Obtener los datos de un empleado asociado a un correo electrónico
+            </summary>
+            <param name="email">Employee email</param>
+            <returns>Data Employee</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.LogController">
+            <summary>
+            Manager log
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.LogController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.LogController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.ILogRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="logRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.LogController.AddLog(Tanner.Core.DataAccess.Models.LogRequest)">
+            <summary>
+            Add log
+            </summary>
+            <param name="request">Log data</param>
+            <returns>Return true if add log</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.OperationController">
+            <summary>
+            Operation controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.OperationController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IOperationRepository,Tanner.Core.DataAccess.Repositories.Interfaces.IEmployeeRepository,Tanner.Core.DataAccess.Repositories.Interfaces.IFileRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="repository"></param>
+            <param name="employeeRepository"></param>
+            <param name="fileRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.Get(System.Int32)">
+            <summary>
+            Get operation data by number
+            </summary>
+            <summary xml:lang="es">
+            Obtener la operación de acuerdo a número de operación
+            </summary>
+            <param name="number">Operation number</param>
+            <returns>Operation detail</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetByExecutiveOrAgent(Tanner.Core.DataAccess.ModelResources.OperationByExecutiveOrAgent)">
+            <summary>
+            Get operations by employee asociated to email
+            </summary>
+            <summary xml:lang="es">
+            Obtener operaciones de un empleado asociado a un correo electrónico
+            </summary>
+            <param name="request">Request</param>
+            <returns>Operations</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetDocuments(System.Int32)">
+            <summary>
+            Get data and documents of operation by number operation
+            </summary>
+            <summary xml:lang="es">
+            Obtener los datos y los documentos de una operación por numero de operación
+            </summary>
+            <param name="number"></param>
+            <returns>Documents of operation associated a operation </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.Get(Tanner.Core.DataAccess.ModelResources.OperationByStatus)">
+            <summary>
+            Get all operations by state
+            </summary>
+            <summary xml:lang="es">
+            Obtener las operaciones por estados
+            </summary>
+            <returns>All operations by Status</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetProposedPayment(System.Int32,Tanner.Core.DataAccess.ModelResources.CommercialTermsResource)">
+            <summary>
+            Get Proposed payment and monthly Rate
+            </summary>
+            <summary xml:lang="es">
+            Obtener el pago propuesto y la tasa mensual
+            </summary>
+            <param name="number">Number of operation</param>
+            <param name="request">Request</param>
+            <returns>Operations</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.Get(System.Decimal,System.Int32)">
+            <summary>
+            Get business iteration by user, operation and ID
+            </summary>
+            <summary xml:lang="es">
+            Obtener la iteración de la negociación por ID, usuario y operación
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.Post(System.Int32,Tanner.Core.DataAccess.Commands.InsertFileOperationCommand)">
+            <summary>
+            Save file by operation number
+            </summary>
+            <summary xml:lang="es">
+            Guardar archivo por número de operación
+            </summary>
+            <param name="number">Operation number</param>
+            <param name="command"></param>
+            <returns>File data</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetOperationSummary(System.Int32,System.Boolean)">
+            <summary>
+            Get data operation by operation or quotation
+            </summary>
+            <summary xml:lang="es">
+            Obtener datos por operación o cotización
+            </summary>
+            <returns>Data operation or quotation</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetDataDocuments(System.Int32)">
+            <summary>
+            Get documents by number operation
+            </summary>
+            <summary xml:lang="es">
+            Obtener los documentos por número de operación
+            </summary>
+            <param name="number"></param>
+            <returns>Documents associated an operation </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetSummaryDocuments(System.Int32)">
+            <summary>
+            Get summary documents by operation number
+            </summary>
+            <summary xml:lang="es">
+            Obtener el total de documentos por número de operación
+            </summary>
+            <param name="number"></param>
+            <returns>Summary documents associated an operation </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.UpdateCommercialTermOperation(Tanner.Core.DataAccess.ModelResources.UpdateCommercialTermOperation)">
+            <summary>
+            Update operation with the new commercial conditions
+            </summary>
+            <summary xml:lang="es">
+            Actualizar operación con las nuevas condiciones comerciales
+            </summary>
+            <param name="request"></param>
+            <returns> Operation response code </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetAmountQuotationByNumberQuotation(System.Int32)">
+            <summary>
+            Get the amount of Quotation
+            </summary>
+            <summary xml:lang="es">
+            Obtener datos por numero de cotización
+            </summary>
+            <returns>Data quotation</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.UpdateDatesOfOperation(Tanner.Core.DataAccess.ModelResources.UpdateDatesOperation)">
+            <summary>
+            Update the Dates of operation
+            </summary>
+            <summary xml:lang="es">
+            Actualiza las fechas de la operación
+            </summary>
+            <param name="request"></param>
+            <returns> Code and Answer of process  </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.RegisterApproved(Tanner.Core.DataAccess.ModelResources.RegisterApprovedParameters)">
+            <summary>
+            Update the state of approved
+            </summary>
+            <summary xml:lang="es">
+            Actualizar el estado del visto bueno
+            </summary>
+            <param name="request"></param>
+            <returns> Operation response code </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.MarkRejectedDocument(Tanner.Core.DataAccess.ModelResources.UpdateDocument)">
+            <summary>
+            Mark Rejected Document
+            </summary>
+            <summary xml:lang="es">
+            Marcar documento rechazado
+            </summary>
+            <param name="request"></param>
+            <returns> Response Code </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.ValidateDocuments(Tanner.Core.DataAccess.ModelResources.OperationDocumentParameter)">
+            <summary>
+            Returns list if the list of documents exists in core
+            </summary>
+            <summary xml:lang="es">
+            Retorna listado si el listado de documentos existe en core
+            </summary>
+            <param name="request"></param>
+            <returns> Table with validated documents </returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.InsertOperation(Tanner.Core.DataAccess.ModelResources.InsertOperation)">
+            <summary>
+            Insert operation
+            </summary>
+            <summary xml:lang="es">
+            Ingresar una operación
+            </summary>
+            <returns> Operation number</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.SimulationAndCreateOperation(Tanner.Core.DataAccess.ModelResources.SimulationAndCreateOperationResource)">
+            <summary>
+            Simulation and Create operation
+            </summary>
+            <summary xml:lang="es">
+            Simula y crea una nueva operación
+            Si el deudor no existe como cliente, responderá con error
+            Si el deudor no existe como deudor, responderá con error
+            Si el cliente no existe como cliente, lo creará
+            </summary>
+            <returns> Operation number</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.CreateOperationDirect(Tanner.Core.DataAccess.ModelResources.CreateOperationWithClientNoSimulation)">
+            <summary>
+            Create an operation without simulating
+            </summary>
+            <summary xml:lang="es">
+            Si el deudor no existe como cliente, responderá con error
+            Si el deudor no existe como deudor, responderá con error
+            Si el cliente no existe como cliente, lo creará
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetOperationByRUT(System.String,Tanner.Core.DataAccess.Models.OperationByRutRequest)">
+            <summary>
+            Get data and documents of operation by RUT customer
+            </summary>
+            <summary xml:lang="es">
+            Obtener los datos y los documentos de la operación por RUT del cliente
+            </summary>ccc
+            <param name="rut">Customer RUT</param>
+            <param name="request">Parámetros de filtrado y ordenamiento</param>
+            <returns>Documents of operation</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetSettlementFormByOperationID(System.Int64)">
+            <summary>
+            Get settlement form by operation number
+            </summary>
+            <summary xml:lang="es">
+            Obtener los datos de la planilla de liquidación por número de operación
+            </summary>ccc
+            <param name="number">Operation number</param>
+            <returns>Return settlement form data</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetDocumentsByOperationID(System.Int64,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Get documents form by operation number
+            </summary>
+            <summary xml:lang="es">
+            Obtener los documentos por número de operación
+            </summary>
+            <param name="number">Operation number</param>
+            <param name="page">Page number</param>
+            <param name="pageSize">Page size</param>
+            <returns>Return documents by operation number</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetStatus(System.Int64)">
+            <summary>
+            Get operation status
+            </summary>
+            <summary xml:lang="es">
+            Obtener el estado de una operación.
+            </summary>
+            <param name="number">Operation number</param>
+            <returns>Operation status</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetOperationByUser(System.String)">
+            <summary>
+            Get operation data by user
+            </summary>
+            <summary xml:lang="es">
+            Obtener la operación por usuario.
+            </summary>
+            <param name="userID">User ID</param>
+            <returns>Operation data by user</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetCreditDetailt(System.Int64)">
+            <summary>
+            Get operation credit detail
+            </summary>
+            <summary xml:lang="es">
+            Obtener el detalle del credito de la operación.
+            </summary>
+            <param name="number">Operation number</param>
+            <returns>Operation credit detail</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationController.GetOperationByDocument(Tanner.Core.DataAccess.Models.OperationByDocumentRequest)">
+            <summary>
+            Get operation by document data.
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.OperationTypeController">
+            <summary>
+            Operation type controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationTypeController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.OperationTypeController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IOperationTypeRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="operationTypeRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.OperationTypeController.Get">
+            <summary>
+            Get all operation types
+            </summary>
+            <summary xml:lang="es">
+            Obtener todos los tipos de operaciones
+            </summary>
+            <returns>All data of operation types</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.ProductTypeController">
+            <summary>
+            Product Type controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ProductTypeController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.ProductTypeController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IProductTypeRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="productTypeRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ProductTypeController.Get">
+            <summary>
+            Get all product types
+            </summary>
+            <summary xml:lang="es">
+            Obtener todos los tipos de productos
+            </summary>
+            <returns>All data of product types</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.QuotationController">
+            <summary>
+            Quotation controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.QuotationController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.QuotationController},MediatR.IMediator)">
+            <summary>
+            Constructor Quotes
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.QuotationController.DeleteDocument(Tanner.Core.DataAccess.Commands.DeleteDocumentQuotationCommand)">
+            <summary>
+            Delete documents quotes
+            </summary>
+            <summary xml:lang="es">
+            Eliminar documentos de cotización
+            </summary>       
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.RatificationDocumentsController">
+            <summary>
+            Ratification Document controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.RatificationDocumentsController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.RatificationDocumentsController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IRatificationDocumentRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="ratificationDocumentRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.RatificationDocumentsController.UpdateRatificationStatus(Tanner.Core.DataAccess.ModelResources.UpdateRatificationStatus)">
+            <summary>
+            Update ratification status
+            </summary>
+            <summary xml:lang="es">
+            Actualizar estado ratificación
+            </summary>
+            <param name="request"></param>
+            <returns> If is ok return 204 </returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.RegionController">
+            <summary>
+            Region controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.RegionController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.RegionController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IRegionRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="regionRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.RegionController.GetRegions">
+            <summary>
+            Get regions 
+            </summary>
+            <summary xml:lang="es">
+            Obtener las regiones
+            </summary>
+            <returns>Regions</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.RegionController.GetCommunes(System.Int32)">
+            <summary>
+            Get communes by region ID
+            </summary>
+            <summary xml:lang="es">
+            Obtiene las comunas de acuerdo al identificador de la región
+            /// </summary>
+            <returns>Communes by region</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.SegprivUserController">
+            <summary>
+            Segpriv user controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.SegprivUserController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.SegprivUserController},MediatR.IMediator,Tanner.Core.Service.Interfaces.ISegprivUserService)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="pricingService"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.SegprivUserController.GetCommercialManagers">
+            <summary>
+            Find all the non-blocked and non-absent commercial managers.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.SimulationController">
+            <summary>
+            Document API
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.SimulationController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.SimulationController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.ISimulationRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="repository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.SimulationController.AddSimulation(Tanner.Core.DataAccess.ModelResources.AddSimulation)">
+            <summary>
+            Add simulation
+            </summary>
+            <summary xml:lang="es">
+            Agregar una nueva simulación
+            </summary>
+            <returns>Number of quotation</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.SimulationController.GetSimulationResults(System.Int64)">
+            <summary>
+            Get simulation results
+            </summary>
+            <summary xml:lang="es">
+            Consulta los resultados de una simulación
+            </summary>
+            <returns>Simulation results</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Controllers.ZoneController">
+            <summary>
+            Zone controller
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ZoneController.#ctor(Microsoft.Extensions.Logging.ILogger{Tanner.Core.API.Controllers.ZoneController},MediatR.IMediator,Tanner.Core.DataAccess.Repositories.Interfaces.IZoneRepository)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="logger">Logger instance</param>
+            <param name="mediator"></param>
+            <param name="zoneRepository"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ZoneController.GetBranchOffice(System.Collections.Generic.IEnumerable{Tanner.Core.DataAccess.Enums.OperationState},System.Int32,System.Int32)">
+            <summary>
+            Get branch office that include operation with one or more states
+            </summary>
+            <summary xml:lang="es">
+            Obtener las sucursales que incluyen operaciones con uno o más estados
+            </summary>
+            <returns>All data of zone</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ZoneController.GetZones(Tanner.Core.DataAccess.ModelResources.ZoneByOperationStatus)">
+            <summary>
+            Get zones that include operation with one or more states
+            </summary>
+            <summary xml:lang="es">
+            Obtener las zonas que incluyen operaciones con uno o más estados
+            </summary>
+            <returns>All data of zone</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Controllers.ZoneController.Get">
+            <summary>
+            Get all zones
+            </summary>
+            <summary xml:lang="es">
+            Obtener todas las zonas
+            </summary>
+            <returns>All data of zone</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Helpers.ConfigurationSetting">
+            <summary>
+            Class that represent the configuration settings
+            </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Helpers.ConfigurationSetting.instance">
+            <summary>
+            Instance for settings
+            </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Helpers.ConfigurationSetting._connectionString">
+            <summary>
+            Connection string
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Helpers.ConfigurationSetting.#ctor">
+            <summary>
+            Configuration settings for builder
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Helpers.ConfigurationSetting.GetValue(System.String)">
+            <summary>
+            Get the key for setting
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Helpers.ConfigurationSetting.GetValueAs``1(System.String)">
+            <summary>
+            Get values for settings
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Helpers.TraceHelper">
+            <summary>
+            Trace for telemetry the insight
+            </summary>
+        </member>
+        <member name="T:Tanner.Core.API.Helpers.TraceHelper.TraceInfoTypes">
+            <summary>
+            Enum for info of trace
+            </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Helpers.TraceHelper.TraceInfoTypes.Information">
+            <summary>
+            Mensajes de información
+            </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Helpers.TraceHelper.TraceInfoTypes.Warning">
+            <summary>
+            Mensajes de peligro
+            </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Helpers.TraceHelper.TraceInfoTypes.Error">
+            <summary>
+            Mensajes de error
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Helpers.TraceHelper.TraceException(System.Exception)">
+            <summary>
+            Trace for execption in insight
+            </summary>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Helpers.TraceHelper.TraceInfo(System.String)">
+            <summary>
+            Message for trace insight
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Helpers.TraceHelper.TraceInfo(System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Parameters for trace info of insight
+            </summary>
+            <param name="method"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Helpers.TraceHelper.TraceInfo(Tanner.Core.API.Helpers.TraceHelper.TraceInfoTypes,System.String,System.Collections.Generic.IDictionary{System.String,System.Object})">
+            <summary>
+            Trace of telemetry for insight
+            </summary>
+            <param name="type"></param>
+            <param name="method"></param>
+            <param name="parameters"></param>
+        </member>
+        <member name="T:Tanner.Core.API.Infrastructure.ActionResults.ControllerExtensions">
+            <summary>
+            Controller extensions
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.ActionResults.ControllerExtensions.GetControllerName(System.String)">
+            <summary>
+            Get controller name
+            </summary>
+            <param name="controller">Controller</param>
+            <returns>Name</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Infrastructure.ActionResults.InternalServerErrorObjectResult">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.ActionResults.InternalServerErrorObjectResult.#ctor(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="error"></param>
+        </member>
+        <member name="T:Tanner.Core.API.Infrastructure.APIInitialize">
+            <summary>
+            Initialize API
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.APIInitialize.InitializeAPI(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+             <summary>
+            
+             </summary>
+             <param name="services"></param>
+             <param name="configuration"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.APIInitialize.AddRepositories(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add repositories to scope
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.APIInitialize.AddClients(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add service to send email
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.APIInitialize.AddDbContext(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add db context
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.APIInitialize.AddCustomServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Add custom services
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="T:Tanner.Core.API.Infrastructure.Configurations.CorsConfiguration">
+            <summary>
+            Represent a cors configuration
+            </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Infrastructure.Configurations.CorsConfiguration.SectionName">
+            <summary>
+            Section name to cors configuration
+            </summary>
+            <summary lang="es">
+            Nombre de la sección de configuración para CORS
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.CorsConfiguration.Origins">
+            <summary>
+            Origins allowed
+            </summary>
+            <summary lang="es">
+            Origenes permitidos
+            </summary>
+        </member>
+        <member name="T:Tanner.Core.API.Infrastructure.Configurations.SwaggerBasicAuth">
+             <summary>
+             Class that represent the parameters of Basic Auth
+             </summary>
+            <summary xml:lang="es">
+             Clase que representa los parametros de la autorización 
+             </summary>
+        </member>
+        <member name="F:Tanner.Core.API.Infrastructure.Configurations.SwaggerBasicAuth.Key">
+             <summary>
+             Key basic auth
+             </summary>
+            <summary xml:lang="es">
+              Llave de acceso a los parámetros
+             </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.SwaggerBasicAuth.User">
+             <summary>
+             User API
+             </summary>
+            <summary xml:lang="es">
+              Usuario de la API
+             </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.SwaggerBasicAuth.Password">
+             <summary>
+             Password API
+             </summary>
+            <summary xml:lang="es">
+              Contraseña para la API
+             </summary>
+        </member>
+        <member name="T:Tanner.Core.API.Infrastructure.Configurations.SwaggerConfiguration">
+            <summary>
+            Swagger Configuration
+            </summary>
+            <summary xml:lang="es">
+            Configuración del swagger  
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.SwaggerConfiguration.Title">
+            <summary>
+            Tittle of endpoint
+            </summary>
+            <summary xml:lang="es">
+            Título del endpoint     
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.SwaggerConfiguration.Description">
+            <summary>
+            Description of endpoint
+            </summary>
+            <summary xml:lang="es">
+            Descripción del endpoint     
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.SwaggerConfiguration.EndpointUrl">
+            <summary>
+            URL of endpoint
+            </summary>
+            <summary xml:lang="es">
+            URL del endpoint     
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.SwaggerConfiguration.EndpointDescription">
+            <summary>
+            Description of endpoint
+            </summary>
+            <summary xml:lang="es">
+            Descripción del endpoint     
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Infrastructure.Configurations.SwaggerConfiguration.Version">
+            <summary>
+            Version of endpoint
+            </summary>
+            <summary xml:lang="es">
+            Versión del endpoint     
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.Configurations.SwaggerConfiguration.GetOpenApiInfo">
+            <summary>
+            Create new Api Info
+            </summary>
+            <summary xml:lang="es">
+            Crea un nuevo objeto para ocupar en el  swagger extensión
+            </summary>
+        </member>
+        <member name="T:Tanner.Core.API.Infrastructure.Extension.SwaggerAuthorizeExtensions">
+            <summary>
+            Class that represent the authorize extension for swagger
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Infrastructure.Extension.SwaggerAuthorizeExtensions.UseSwaggerAuthorized(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            Use the swagger authorized
+            </summary>
+            <param name="builder"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Middleware.ExceptionMiddleware">
+            <summary>
+            Class that represent the execption of middleware
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Middleware.ExceptionMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Middleware.ExceptionMiddleware.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            method that invoke the exeption
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Middleware.SwaggerBasicAuthMiddleware">
+            <summary>
+            Class that represent the swagger basic auth
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Middleware.SwaggerBasicAuthMiddleware.#ctor(Microsoft.AspNetCore.Http.RequestDelegate,Microsoft.Extensions.Options.IOptions{Tanner.Core.API.Infrastructure.Configurations.SwaggerBasicAuth})">
+            <summary>
+            Basic auth
+            </summary>
+            <param name="next"></param>
+            <param name="swaggerBasicAuth">parameters of basic auth</param>
+        </member>
+        <member name="M:Tanner.Core.API.Middleware.SwaggerBasicAuthMiddleware.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            if have swagger request authorization
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Tanner.Core.API.Middleware.SwaggerBasicAuthMiddleware.IsAuthorized(System.String,System.String)">
+            <summary>
+            Get bool if user is authorized
+            </summary>
+            <param name="username">Nombre de usuario</param>
+            <param name="password">Contraseña</param>
+            <returns>True if is authorized</returns>
+        </member>
+        <member name="M:Tanner.Core.API.Middleware.SwaggerBasicAuthMiddleware.IsLocalRequest(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            If is a local start does not request authorization
+            </summary>
+            <param name="context"></param>
+            <returns>bool if is local return true</returns>
+        </member>
+        <member name="T:Tanner.Core.API.Model.ErrorResponse">
+            <summary>
+            Class that represent the errors of insight
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Model.ErrorResponse.Id">
+            <summary>
+            Id of Error
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Model.ErrorResponse.Message">
+            <summary>
+            Message of error
+            </summary>
+        </member>
+        <member name="T:Tanner.Core.API.Program">
+            <summary>
+            Program
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Program.Main(System.String[])">
+            <summary>
+            Main
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Program.CreateWebHostBuilder(System.String[])">
+            <summary>
+            Create Web Host Builder
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Tanner.Core.API.Startup">
+            <summary>
+            Startup
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Startup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="environment"></param>
+        </member>
+        <member name="P:Tanner.Core.API.Startup.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="P:Tanner.Core.API.Startup.Environment">
+            <summary>
+            Environment
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:Tanner.Core.API.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Tanner.Core.API.Validations.AddClientCheckingAccountCommandValidator">
+            <summary>
+            Validate add client checking account
+            </summary>
+            <summary lang="es">
+            Validar los datos de inserción de una cuenta corriente a un cliente
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Validations.AddClientCheckingAccountCommandValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:Tanner.Core.API.Validations.OperationByExecutiveOrAgentValidator">
+            <summary>
+            Validate request to search operation by executive or agent
+            </summary>
+            <summary lang="es">
+            Validar los datos de la solicitud de búsqueda de las operaciones por ejecutivo o agente
+            </summary>
+        </member>
+        <member name="M:Tanner.Core.API.Validations.OperationByExecutiveOrAgentValidator.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>

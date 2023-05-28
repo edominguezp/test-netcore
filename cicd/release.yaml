@@ -1,0 +1,65 @@
+trigger: none
+
+variables:
+- template: ../cicd-variables.yaml  # Template reference
+
+resources:
+  repositories:
+  - repository: commonPipelinesRepo
+    type: git
+    name: devops-assets/common-pipelines
+  - repository: helmChart
+    type: git
+    name: devops-assets/aks-helm-charts
+  pipelines:
+  - pipeline: build
+    source: Back-End\Builds/Build.core-api
+    trigger: true
+
+stages:
+- template: net-core-app/release-new-aks.yaml@commonPipelinesRepo
+  parameters:
+      aks-definition-folder: 'AKS-Definition/Development' # path to solution or project that will be used in the build and restore tasks
+      env: 'dev'
+      azure-subscription: 'EATannerDev'
+      region: "des-westus"
+      app-name: $(app-name)
+      app-project: $(app-project)
+      app-bu: $(app-bu)
+      namespace: $(namespace)
+      helm-template: net-core-app
+      storage-account: saaksdesbackend
+      container-name: akshelmreleasesbackup
+
+- template: net-core-app/release-new-aks.yaml@commonPipelinesRepo
+  parameters:
+      aks-definition-folder: 'AKS-Definition/Quality' # path to solution or project that will be used in the build and restore tasks
+      env: 'qa'
+      azure-subscription: 'EATannerQA'
+      region: "qa-westus"
+      app-name: $(app-name)
+      app-project: $(app-project)
+      app-bu: $(app-bu)
+      namespace: $(namespace)
+      helm-template: net-core-app
+      storage-account: saaksqabackend
+      container-name: akshelmreleasesbackup
+
+- template: net-core-app/release-new-aks-prod.yaml@commonPipelinesRepo
+  parameters:
+      aks-definition-folder: 'AKS-Definition/Production' # path to solution or project that will be used in the build and restore tasks
+      env: 'prod'
+      azure-subscription: 'GlobalEAAzureTannerForReleasePipeline'
+      region: "prod1-westus"
+      app-name: $(app-name)
+      app-project: $(app-project)
+      app-bu: $(app-bu)
+      namespace: $(namespace)
+      project-secrets: []
+      app-secrets: ["user","password","InstrumentationKey","server-ssiscore","swagger-user","swagger-password"]
+      secrets-project-prefix: ''
+      secrets-app-prefix: 'api'
+      keyvault-name: $(keyvault-name)
+      helm-template: net-core-app
+      storage-account: saaksprodbackend1
+      container-name: akshelmreleasesbackup

@@ -1,0 +1,34 @@
+apiVersion: apps/v1beta1 # for versions before 1.7.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: tanner-core-api
+  namespace: core
+  labels:
+    app: tanner-core-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tanner-core-api
+  template:
+    metadata:
+      labels:
+        app: tanner-core-api
+    spec:
+      containers:
+      - name: tanner-core-api
+        image: acrautomotriz.azurecr.io/tanner.core.api:4006
+        imagePullPolicy: Always
+        ports:
+        - name: http
+          containerPort: 80
+        - name: https
+          containerPort: 443
+      volumes:
+      - name: settings
+        secret:
+          secretName: tanner-core-api-secret
+      nodeSelector:
+        beta.kubernetes.io/os: linux
+      imagePullSecrets:
+        - name: azurecontainerregistry

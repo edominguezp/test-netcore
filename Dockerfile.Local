@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+WORKDIR /app
+ 
+# Copy Files
+COPY ./*.sln ./
+COPY */*.csproj ./
+COPY *.config ./
+ 
+RUN for file in $(ls Tanner.Payment.*.csproj); do mkdir -p ${file%.*} && mv $file ${file%.*}; done
+ 
+# Restore using local nuget.config or --source attribute
+RUN dotnet restore -s https://as-nuget-des.azurewebsites.net/nuget/ -s https://api.nuget.org/v3/index.json --packages packages --ignore-failed-sources
+ 
+COPY . .
+WORKDIR /app/
+RUN dotnet publish -c Release -o out --no-restore
+ 
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+WORKDIR /app
+COPY --from=build /app/Tanner.Payment.API/out ./
+ENTRYPOINT ["dotnet", "Tanner.Payment.API.dll"]
